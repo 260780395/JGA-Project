@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#121212">
+    <meta name="description" content="Big crunch. Big flavour. Order Kasi - Crunch online for collection or delivery.">
+    <title>Kasi - Crunch | Big crunch. Big flavour.</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div id="runtime-warning" class="runtime-warning" role="status" hidden></div>
+    <div class="announcement"><span>MADE FRESH. SERVED WITH A LITTLE EXTRA.</span><span>DELIVERY FROM R16 / KM</span></div>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Kasi Crunch home"><span class="brand-mark">KC</span><span>KASI<span class="brand-dash"> - </span>CRUNCH<small>GOOD FOOD. GOOD MOOD.</small></span></a>
+      <nav class="main-nav" aria-label="Main navigation"><a href="#menu">The menu</a><a href="#story">Our story</a></nav>
+      <div class="header-actions"><button id="account-button" class="account-button" type="button">Sign in</button><button id="basket-button" class="basket-button" type="button" aria-label="Open basket">Your basket <span id="basket-count">0</span></button><button id="mobile-menu" class="mobile-menu" type="button" aria-label="Open menu">☰</button></div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-copy"><p class="eyebrow"><span class="eyebrow-line"></span> YOUR NEW LOCAL FAVOURITE</p><h1>Big crunch.<br><em>Big flavour.</em></h1><p class="hero-description">Proper comfort food, made fresh and packed with flavour. Get it delivered to your door or swing by and collect.</p><div class="hero-actions"><a class="button button-primary" href="#menu">ORDER SOMETHING GOOD <span aria-hidden="true">↗</span></a><span class="hero-note">Freshly made. Always.</span></div><div class="hero-stats"><div><strong>100%</strong><span>GOOD VIBES</span></div><div><strong>Made fresh</strong><span>WHEN YOU ORDER</span></div><div><strong>R16/km</strong><span>DELIVERY FEE</span></div></div></div>
+        <div class="hero-art"><div class="hero-sticker">HOT<br><span>&</span><br>FRESH</div><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1100&q=85" alt="Juicy burger piled with fresh toppings"><div class="hero-caption"><span>01 / THE CLASSIC</span><span>MADE FOR THE MOMENT</span></div></div>
+        <div class="hero-decoration" aria-hidden="true">KC</div>
+      </section>
+      <section class="ticker" aria-label="Our promise"><div>CRISPY ON THE OUTSIDE <span>✳</span> JUICY ON THE INSIDE <span>✳</span> ALWAYS MADE FRESH <span>✳</span> BIG FLAVOUR, NO SHORTCUTS <span>✳</span> CRISPY ON THE OUTSIDE <span>✳</span></div></section>
+      <section class="menu-section section-wrap" id="menu">
+        <div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> GOOD THINGS ARE COOKING</p><h2>Meet your <em>new favourites.</em></h2></div><p>Big flavours, fresh ingredients, and the kind of food you think about later. <strong>Draft menu and prices—confirm before launch.</strong></p></div>
+        <div id="category-list" class="category-list" aria-label="Filter menu"></div>
+        <div id="menu-grid" class="menu-grid"><div class="loading-card">Getting the good stuff ready…</div></div>
+      </section>
+      <section class="story-section" id="story"><div class="story-photo"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1100&q=85" alt="Freshly made burger with golden fries"></div><div class="story-copy"><p class="eyebrow"><span class="eyebrow-line"></span> FROM OUR KITCHEN TO YOURS</p><h2>Good food.<br><em>Good people.</em></h2><p>We believe a great meal can turn an ordinary day around. So we bring big-hearted portions, real ingredients and a little kasi soul to every order.</p><p>Every burger is built fresh. Every batch is made with care. And every bite? That's the good stuff.</p><a class="text-link" href="#menu">Find your favourite <span aria-hidden="true">↗</span></a></div></section>
+      <section class="last-call"><p class="eyebrow"><span class="eyebrow-line"></span> YOU KNOW WHAT TO DO</p><h2>Good food is<br><em>calling.</em></h2><a class="button button-dark" href="#menu">LET'S EAT <span aria-hidden="true">↗</span></a><div class="last-call-seal">KASI<br><span>♥</span><br>CRUNCH</div></section>
+    </main>
+    <footer class="site-footer"><a class="brand brand-footer" href="/"><span class="brand-mark">K</span><span>KASI<span class="brand-dash"> - </span>CRUNCH<small>GOOD FOOD. GOOD MOOD.</small></span></a><span>Made with a little extra love. © <span id="year"></span> Kasi - Crunch.</span><a href="#menu">Back to the good stuff ↑</a></footer>
+
+    <aside id="basket-panel" class="basket-panel" aria-label="Your basket" aria-hidden="true">
+      <div class="panel-heading"><div><p class="eyebrow">THE GOOD STUFF</p><h2>Your basket<span id="panel-count"></span></h2></div><button class="icon-button" data-close-basket aria-label="Close basket">×</button></div>
+      <div id="basket-items" class="basket-items"></div>
+      <div id="basket-empty" class="basket-empty"><span>✳</span><h3>It's a little empty in here.</h3><p>Let's fix that with something delicious.</p><button class="text-link" data-close-basket type="button">Explore the menu ↗</button></div>
+      <div id="basket-summary" class="basket-summary" hidden><div class="subtotal-row"><span>Subtotal</span><strong id="basket-subtotal">R0.00</strong></div><p>Delivery fee is calculated at checkout. Collection is always free.</p><button id="checkout-button" class="button button-primary button-full" type="button">LET'S CHECK OUT <span aria-hidden="true">↗</span></button></div>
+    </aside>
+    <div id="scrim" class="scrim"></div>
+
+    <dialog id="auth-dialog" class="modal">
+      <button class="icon-button modal-close" data-close-auth aria-label="Close">×</button>
+      <p class="eyebrow"><span class="eyebrow-line"></span> GOOD TO SEE YOU</p><h2 id="auth-title">Welcome <em>back.</em></h2><p id="auth-intro" class="modal-intro">Sign in to place your order and keep track of the good stuff.</p>
+      <div id="auth-notice" class="notice" role="status" hidden></div>
+      <form id="auth-form">
+        <label id="name-field" class="form-field" hidden>Your name<input name="name" autocomplete="name" minlength="2" maxlength="80"></label>
+        <label id="email-field" class="form-field">Email address<input name="email" type="email" autocomplete="email" required maxlength="254"></label>
+        <label id="password-field" class="form-field">Password<input name="password" type="password" autocomplete="current-password" minlength="10" maxlength="128"></label>
+        <label id="reset-password-field" class="form-field" hidden>New password<input name="newPassword" type="password" autocomplete="new-password" minlength="10" maxlength="128"></label>
+        <button id="auth-submit" class="button button-primary button-full" type="submit">SIGN IN <span aria-hidden="true">↗</span></button>
+      </form>
+      <div id="auth-links" class="auth-links"><button type="button" data-auth-mode="forgot">Forgot your password?</button><span>New around here? <button type="button" data-auth-mode="signup">Create an account</button></span></div>
+      <div id="account-actions" class="account-actions" hidden><button id="orders-button" class="button button-outline button-full" type="button">YOUR RECENT ORDERS</button><button id="logout-button" class="text-link" type="button">Sign out</button><div id="orders-list"></div></div>
+    </dialog>
+
+    <dialog id="checkout-dialog" class="modal checkout-modal">
+      <button class="icon-button modal-close" data-close-checkout aria-label="Close">×</button>
+      <p class="eyebrow"><span class="eyebrow-line"></span> ALMOST THERE</p><h2>Make it <em>yours.</em></h2><p class="modal-intro">Your food is made fresh once the order is in. Pay on delivery or when you collect.</p>
+      <div id="checkout-notice" class="notice" role="status" hidden></div>
+      <form id="checkout-form">
+        <div class="form-row"><label class="form-field">Your name<input name="customerName" autocomplete="name" required minlength="2" maxlength="80"></label><label class="form-field">Phone number<input name="phone" type="tel" autocomplete="tel" required minlength="7" maxlength="30"></label></div>
+        <fieldset class="fulfillment-options"><legend>How would you like it?</legend><label><input type="radio" name="fulfillment" value="delivery" checked><span>🚗 &nbsp;Bring it to me</span></label><label><input type="radio" name="fulfillment" value="collection"><span>🛍 &nbsp;I'll collect</span></label></fieldset>
+        <div id="delivery-fields"><label class="form-field">Delivery address<input name="address" autocomplete="street-address" placeholder="Street, suburb, city" minlength="8" maxlength="300"></label><label class="form-field">Distance from the restaurant <span class="field-unit">(km)</span><input name="distanceKm" type="number" inputmode="decimal" min="0.1" max="250" step="0.1" placeholder="e.g. 4.5"><small>Estimate the distance in kilometres. Delivery is R16 per km.</small></label></div>
+        <div class="checkout-totals"><div><span>Food subtotal</span><strong id="checkout-subtotal">R0.00</strong></div><div><span>Delivery fee</span><strong id="checkout-delivery">R0.00</strong></div><div class="checkout-total"><span>Total to pay on arrival</span><strong id="checkout-total">R0.00</strong></div></div>
+        <button class="button button-primary button-full" type="submit">PLACE MY ORDER <span aria-hidden="true">↗</span></button>
+        <p class="secure-note">🔒 Your account and order details are securely protected.</p>
+      </form>
+    </dialog>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
